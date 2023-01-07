@@ -15,24 +15,41 @@ namespace IntegerWebApplication.Controllers
                 IDRegistration = 1,
                 Type = "Sedan",
                 Brand = "Toyota",
-                Varian = "Black"
+                Varian = "FT86"
             });
 
             cars.Add(new Car()
             {
                 IDRegistration = 2,
-                Type = "Sedan",
-                Brand = "BMW",
-                Varian = "Soft Purple"
+                Type = "SUV",
+                Brand = "Toyota",
+                Varian = "RAV4"
             });
 
             cars.Add(new Car()
             {
                 IDRegistration = 3,
-                Type = "SUV",
-                Brand = "Hyundai",
-                Varian = "Black Doff"
+                Type = "Sedan",
+                Brand = "Honda",
+                Varian = "Accord"
             });
+
+            cars.Add(new Car()
+            {
+                IDRegistration = 4,
+                Type = "SUV",
+                Brand = "Honda",
+                Varian = "CRV"
+            });
+
+            cars.Add(new Car()
+            {
+                IDRegistration = 5,
+                Type = "Sedan",
+                Brand = "Honda",
+                Varian = "City"
+            });
+
 
 
             //NAMBAH DATA BANYAK
@@ -55,10 +72,35 @@ namespace IntegerWebApplication.Controllers
             //var car = cars.Where(x => x.Type == "Sedan");
             //ViewBag.Cars = car;
 
-            var car = cars.Where(x => x.Type == "Sedan").LastOrDefault(); //FirstOrDefault
-            ViewBag.Cars = new List<Car>() { car};
+            //var car = cars.Where(x => x.Type == "Sedan").LastOrDefault(); //FirstOrDefault
+            //ViewBag.Cars = new List<Car>() { car};
 
-           
+            //NOMOR 1
+            //var cari = cars.Where(x => x.Brand == "Honda").FirstOrDefault();
+            //ViewBag.Cars = new List<Car>() { cari };
+
+            //NOMOR 2
+            //var cari = cars.Where(x => x.Brand == "Honda" && x.Type == "Sedan");
+            //ViewBag.Cars = cari;
+
+            //NOMOR 3
+            //var cari = cars.Where(x => x.Brand == "Honda" && x.Varian == "City").FirstOrDefault();
+            //ViewBag.Cars = new List<Car>() { cari };
+
+            //NOMOR 4
+            //var cari = cars.Where(x => x.Brand == "Toyota");
+            //ViewBag.Cars = cari;
+
+            //NOMOR 5
+            //var cari = cars.Where(x => x.Varian == "City");
+            //ViewBag.Cars = cari;
+
+            //NOMOR 6
+            var cari = cars.Where(x => x.Type == "Sedan");
+            ViewBag.Cars = cari;
+
+
+
 
 
 
